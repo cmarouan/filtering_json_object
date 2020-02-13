@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="./data/feed.js"></script> 
+    <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800|Montserrat&display=swap" rel="stylesheet">
+    <title>Vimeo</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="side_movie" id="all_movies">
+           
+        </div>
+        <div class="side_tools">
+           <div class="tools_header">
+               ADVANCE TOOLS
+           </div>
+           <hr />
+           <div class="title_search">
+                Custom Search
+           </div>
+           <div class="tools_content">
+               <label for="desc_content" class="tools_header">SEARCH</label>
+               <input type="text" placeholder="Find in the description" id="desc_content" oninput="apply_filters()">
+           </div>
+           <div class="tools_header" id="tools_header">
+               USERS THAT HAVE MORE THAN 10 LIKES
+           </div>
+           <div class="active_show">
+                <div class="tools_header">show</div>
+                <div class="active_btn">
+                    <input type="checkbox" class="inputs" id="active_likes" onclick="apply_filters()">
+                </div>
+            </div>
+            <div class="drop_down">
+                <select class="inputs" id="likes_nb" onchange="change_value()">
+                    <option value="10">10</option>
+                    <option value="100">100</option>
+                    <option value="1000">1000</option>
+                    <option value="10000">10000</option>
+                    <option value="10001">10000+</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./render.js"></script> 
+    <script type="text/javascript" src="./index.js"></script> 
+</body>
+</html>
